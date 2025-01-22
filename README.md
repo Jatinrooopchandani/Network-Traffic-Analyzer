@@ -1,1 +1,2 @@
 # Network-Traffic-Analyzer
+Network traffic analysis (NTA) is a technique for keeping track of network activity and availability in order to spot anomalies, such as security and operational problems. We can identify things like huge downloads, streaming, and suspicious inbound or outgoing traffic using the traffic analysis tool. We've used scapy to check the three key duties for analyzing our network.
