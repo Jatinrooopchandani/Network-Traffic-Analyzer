@@ -1,10 +1,31 @@
 from scapy.all import *
 
 def packet_capture(interface, count):
+    """Capture network packets from a specified interface.
+    
+    Args:
+        interface (str): The network interface to capture packets from.
+        count (int): The number of packets to capture.
+    
+    Returns:
+        list: A list of captured packets.
+    """
     packets = sniff(iface=interface, count=count)
     return packets
 
 def anomaly_detection(packets, threshold):
+    """Detects anomalies in network packets based on packet length.
+    
+    Args:
+        packets (list): A list of network packets to analyze.
+        threshold (int): The maximum allowed packet length before considering it an anomaly.
+    
+    Returns:
+        list: A list of anomalous packets as strings.
+    
+    Prints:
+        Packet Length: <length> for each packet analyzed.
+    """
     anomalies = []
     for packet in packets:
         packet_length = len(packet)
